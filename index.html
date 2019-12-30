@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport"
+        content="initial-scale=1.0,minimum-scale=1,maximum-scale=1.0,width=device-width, user-scalable=no" />
+    <style>
+        :root {
+            --main-height: 100vh;
+            --main-landscape-width: 56.25vh;
+            --main-portrait-width: 100vw;
+        }
+        html,
+        body {
+            margin: 0;
+            padding: 0 !important;
+        }
+        body {
+            display: flex;
+            justify-content: center;
+            font-family: -apple-system, BlinkMacSystemFont, Avenir Next, Avenir, Helvetica, sans-serif;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            -webkit-user-select: none;
+            -webkit-tounch-callout: none;
+            -moz-user-select: none;
+            -khtml-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+            background-color: #ddd;
+        }
+        #root {
+            height: 100vh;
+            width: var(--main-portrait-width);
+            margin: 0;
+            background-color: #aaa;
+        }
+        @media (min-width: 769px) and (orientation: landscape) {
+            #root {
+                width: var(--main-landscape-width);
+            }
+        }
+        @media (max-width: 768px) and (orientation: portrait) {
+            #root {
+                width: var(--main-portrait-width);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id='root'>
+        <p>Good For Mobile View</p>
+    </div>
+</body>
+</html>
